@@ -1,0 +1,202 @@
+
+<html>
+<head>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Oswald&family=Source+Code+Pro:wght@200&display=swap');
+
+  body { background: #000; }
+
+  :root { 
+        --bg-color: #0f111a; 
+        --fg-color: #9fa6bc; 
+      }
+
+      html, body { 
+        background: var(--bg-color); 
+        color: var(--fg-color); 
+        font-family: 'Abel', sans-serif;
+      }
+
+      .view-layer { 
+        position: absolute; 
+        top: 0; left: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: hidden; 
+      }
+
+      .view-layer svg { 
+        min-width: 1000px; 
+        min-height: 400px; 
+        width: 1000px; 
+        height: 400px; 
+        max-width: 1000px; 
+        max-width: 400px; 
+      }
+
+  .fade-in { 
+        animation: fadeIn; 
+        animation-duration: 4s; 
+        animation-delay: 10s; 
+        animation-fill-mode: forwards;
+        opacity: 0; 
+      }
+
+      @keyframes fadeIn { 
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      header { 
+        font-size: 3rem;
+        margin-top: 2rem; 
+        padding: 1rem; 
+        padding-left: 6rem; 
+        border-top: 1px solid #fff; 
+        border-bottom: 1px solid #fff; 
+        text-wrap: nowrap; 
+        font-family: 'Abel', sans-serif;
+      }
+</style>
+
+<script>
+
+
+  
+</script>
+</head>
+
+<body>
+  <header class="fade-in" >tenebrio technologies</header>
+  <div class="view-layer">
+  <svg stroke="#224466" viewBox="0 0 1000 200" width="1000" height="400" preserveAspectRatio="slice">
+
+    <defs>
+      <g id="antenna">
+        <line x1="6" y1="9" x2="4" y2="4">
+          <animate attributeName="x2" values="4;5;4" dur="1s" repeatCount="indefinite" />
+          <animate attributeName="y2" values="4;5;4" dur="1s" repeatCount="indefinite" />
+        </line>
+
+        <line x1="4" y1="4" x2="6" y2="1">
+          <animate attributeName="x1" values="4;5;4" dur="1s" repeatCount="indefinite"/>
+          <animate attributeName="y1" values="4;5;4" dur="1s" repeatCount="indefinite"/>
+          <animate attributeName="x2" values="3;6;3" dur="1s" repeatCount="indefinite"/>
+          <animate attributeName="y2" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+        </line>
+      </g>
+
+      <g id="leg">
+        <line x1="0" y1="1" x2="3" y2="1"/>
+        <line x1="3" y1="1" x2="10" y2="-6">
+          <animate attributeName="y2" values="-6;2;-6" dur="2s" repeatCount="indefinite"/>         
+          <animate attributeName="x2" values="9;10;9" dur="2s" repeatCount="indefinite"/>         
+        </line>
+
+        <line x1="10" y1="-6" x2="13" y2="-6">
+          <animate attributeName="x2" values="13;11;13" dur="2s" repeatCount="indefinite"/>         
+          <animate attributeName="y1" values="-6;2;-6" dur="2s" repeatCount="indefinite"/>         
+          <animate attributeName="y2" values="-6;2;-6" dur="2s" repeatCount="indefinite"/>         
+        </line>
+      </g>
+
+      <g id="beetle" stroke-linecap="round" transform="rotate(90 20 20)" stroke="#567">
+        <path id="body" d="m 20 20 a 1 0.5 0 0 1 20 0 v 15 a 1 2 0 0 1 -20 0 z m 0 2 l 10 3 m 10 -3 l -10 3 m 0 0 v 30 m -8 -38 a 1 1.2 0 0 1 16 0" fill="none"/>
+       
+        <use xlink:href="#antenna" x="20" y="0" />
+        <use xlink:href="#antenna" x="30" y="0" transform="translate(70, 0) scale(-1, 1)"/>
+  
+        <use id="front-right" xlink:href="#leg" x="40" y="20" transform="scale(1, -1) translate(0 -42)" /> 
+        <use id="mid-right" xlink:href="#leg" x="40" y="30" />
+        <use id="back-right" xlink:href="#leg" x="40" y="0" transform="translate(0, 40) scale(1, -1)"/>
+        
+        <use id="front-left" xlink:href="#leg" x="20" y="20" transform="translate(40, 0) scale(-1 1)"/>
+        <use id="mid-left" xlink:href="#leg" x="20" y="30" transform="translate(40, 60) scale(-1, -1)"/>
+        <use xlink:href="#leg" x="20" y="0" transform="translate(40, 40) scale(-1, 1)"/>
+      </g>
+
+      <g id="worm" >
+        <circle cx="3" cy="3" r="3" fill="none">
+          <animate attributeName="cy" values="3;2;3;4;3" begin="9s" dur="1s" repeatCount="indefinite"/></circle>
+        <circle cx="3" cy="3" r="3" fill="none">
+          <animate attributeName="cx" to="6" fill="freeze" begin="6s" dur="3s"/>
+          <animate attributeName="cy" values="3;2;3;4;3" begin="9.2s" dur="1s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="3" cy="3" r="3" fill="none">
+          <animate attributeName="cx" to="9" fill="freeze" begin="6s" dur="3s"/>
+          <animate attributeName="cy" values="3;2;3;4;3" begin="9.4s" dur="1s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="3" cy="3" r="3" fill="none">
+          <animate attributeName="cx" to="12" fill="freeze" begin="6s" dur="3s"/>
+          <animate attributeName="cy" values="3;2;3;4;3" begin="9.6s" dur="1s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="3" cy="3" r="3" fill="none">
+          <animate attributeName="cx" to="16" fill="freeze" begin="6s" dur="3s"/>
+          <animate attributeName="cy" values="3;2;3;4;3" begin="9.8s" dur="1s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+
+      <g id="intro">
+        <use xlink:href="#beetle">
+          <animateMotion dur="5s" rotate="auto" fill="freeze"
+            path="M 0 70 q 50 16 90 20 q 50 -10 100 0 q 50 10 100 0 q 50 -10 100 20 q 50 30 103 30 q 17 0 1 -10"/>
+        </use>
+    
+        <circle cx="500" cy="100" r="3000" fill="none" stroke-width="4" stroke="#aaa">
+          <animate attributeName="r" to="50" begin="3s" dur="2s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.9 0.8 0.5 0.1" />
+        </circle>
+        <circle cx="500" cy="100" r="64" stroke-width="0" stroke-dasharray="34" fill="none">
+          <animate id="gears.end" attributeName="stroke-width" to="16" begin="5s" dur="1s" fill="freeze"/>
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="rotate"
+              begin="5s"
+              from="0 500 100"
+              to="360 500 100"
+              dur="10s"
+              repeatCount="indefinite" 
+              />
+        </circle>
+      </g>
+
+    </defs>
+
+    <use href="#worm" x="400" y="150" stroke="#0f111a">
+      <animate attributeName="stroke" to="#224466" begin="4s" dur="1s" fill="freeze"/>
+      <animate attributeName="x" to="-100" begin="9s" dur="5s" fill="freeze"/>
+    </use>
+
+    <use href="#intro" x="0" y="0">
+      <animateTransform
+      attributeType="xml" 
+      attributeName="transform"
+      type="translate"
+      begin="8s"
+      dur="3s"
+      values="0,0;-200,-70"
+      fill="freeze"
+      />
+      <animateTransform 
+     attributeType="xml" 
+     attributeName="transform" 
+     begin="8s"
+     type="scale"
+     dur='3s'
+     values="1;.5"
+     fill="freeze"
+    additive="sum"/>
+    </use>
+
+   
+
+  
+
+
+  </svg>
+</div>
+
+  
+</body>
+</html>
