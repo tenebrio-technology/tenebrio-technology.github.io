@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Tests passed\" && exit 0",
-    "build": "cp -r node_modules/@tenebrio-technology/assets/dist/* . ",
-    "start": "live-server --open=demo/index.html"
+    "demo": "cp -r node_modules/@tenebrio-technology/assets/dist/* . ",
+    "start": "live-server docs --open=demo/index.html"
   },
   "author": "",
   "license": "ISC",
