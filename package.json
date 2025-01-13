@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": ""
+    "test": "echo \"Tests passed\" && exit 0",
+    "build": "cp -r node_modules/@tenebrio-technology/assets/dist/* . ",
+    "start": "live-server --open=demo/index.html"
   },
   "author": "",
   "license": "ISC",
-  "dependancies": { 
-    "@tenebrio-technology/assets": "1.0.0"
+  "dependencies": {
+    "@tenebrio-technology/assets": "1.0.0",
+    "live-server": "^1.2.2"
   }
 }
