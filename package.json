@@ -8,5 +8,8 @@
     "start": ""
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependancies": { 
+    "@tenebrio-technology/assets": "1.0.0"
+  }
 }
